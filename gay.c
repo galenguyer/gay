@@ -37,7 +37,8 @@ void print_line(struct color c, int length, int scale) {
 		set_8bit(c.xterm);
 		set_24bit(c.r, c.g, c.b);
 		for (int i = 0; i < length*scale; i++) {
-			printf(" ");
+			// ascii character 219 (https://www.extended-ascii.com/)
+			printf("█");
 		}
 		reset_colors();
 		printf("\n");
@@ -54,7 +55,7 @@ int main() {
 
 	struct color colors[6] = { red, orange, yellow, green, blue, purple };
 	int colors_t = (int)(sizeof(colors)/sizeof(colors[0]));
-	
+
 	puts("");
 	for (int i = 0; i < colors_t; i++) {
 		print_line(colors[i], colors_t*3-1, 1);
