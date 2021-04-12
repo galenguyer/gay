@@ -43,27 +43,19 @@ void print_line(struct color c, int length) {
 }
 
 int main() {
-	puts("");
-
-	// red
 	struct color red = { .ansi = 41, .xterm = 160, .r = 228, .g = 3, .b = 3 };
-	print_line(red, 17);
-	// orange
 	struct color orange = { .ansi = 101, .xterm = 208, .r = 255, .g = 140, .b = 0 };
-	print_line(orange, 17);
-	// yellow
 	struct color yellow = { .ansi = 103, .xterm = 226, .r = 255, .g = 237, .b = 0 };
-	print_line(yellow, 17);
-	// green
 	struct color green = { .ansi = 42, .xterm = 28, .r = 0, .g = 128, .b = 38 };
-	print_line(green, 17);
-	// blue
 	struct color blue = { .ansi = 104, .xterm = 27, .r = 0, .g = 77, .b = 255 };
-	print_line(blue, 17);
-	// purple
 	struct color purple = { .ansi = 45, .xterm = 90, .r = 117, .g = 7, .b = 135 };
-	print_line(purple, 17);
 
+	struct color colors[6] = { red, orange, yellow, green, blue, purple };
+	
+	puts("");
+	for (unsigned long int i = 0; i < sizeof(colors)/sizeof(colors[0]); i++) {
+		print_line(colors[i], 17);
+	}
 	puts("");
 
 	return 0;
