@@ -43,7 +43,7 @@ int main() {
 	// yellow
 	printf("  ");
 	set_ansi(103);
-	set_8bit(190);
+	set_8bit(226);
 	set_24bit(255, 237, 0);
 	printf("+++++++++++++++++");
 	reset_colors();
@@ -59,7 +59,7 @@ int main() {
 	// blue
 	printf("  ");
 	set_ansi(104);
-	set_8bit(63);
+	set_8bit(27);
 	set_24bit(0, 77, 255);
 	printf("+++++++++++++++++");
 	reset_colors();
@@ -67,7 +67,7 @@ int main() {
 	// purple
 	printf("  ");
 	set_ansi(45);
-	set_8bit(19);
+	set_8bit(90);
 	set_24bit(117, 7, 135);
 	printf("+++++++++++++++++");
 	reset_colors();
