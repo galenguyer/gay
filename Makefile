@@ -22,13 +22,13 @@ $(OUTPUT): Makefile $(SOURCE)
 
 install: $(OUTPUT)
 	install -Dm755 "gay"   "$(PREFIX)/bin/gay"
-	#install -Dm644 "LICENSE"    "$(PREFIX)/share/licenses/cpufetch-git/LICENSE"
-	#install -Dm644 "cpufetch.8" "$(PREFIX)/share/man/man8/cpufetch.8.gz"
+	install -Dm644 "LICENSE"    "$(PREFIX)/share/licenses/gay/LICENSE"
+	#install -Dm644 "gay.8" "$(PREFIX)/share/man/man8/gay.8.gz"
 
 uninstall:
 	rm -f "$(PREFIX)/bin/gay"
-	#rm -f "$(PREFIX)/share/licenses/cpufetch-git/LICENSE"
-	#rm -f "$(PREFIX)/share/man/man8/cpufetch.8.gz"
+	rm -f "$(PREFIX)/share/licenses/gay/LICENSE"
+	#rm -f "$(PREFIX)/share/man/man8/gay.8.gz"
 
 #gay: gay.c
 #	gcc -ggdb -o $@ -std=c99 -Wall $<
