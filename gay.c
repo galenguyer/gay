@@ -6,7 +6,7 @@ void set_ansi(int fg) {
 
 void set_8bit(int color) {
 	// foreground
-	//printf("\033[38;5;%dm", color);
+	printf("\033[38;5;%dm", color);
 	// background
 	printf("\033[48;5;%dm", color);
 }
@@ -15,7 +15,7 @@ void set_24bit(int r, int g, int b) {
 	// foreground
 	printf("\033[38;2;%d;%d;%dm", r, g, b);
 	// background
-	//printf("\033[48;2;%d;%d;%dm", r, g, b);
+	printf("\033[48;2;%d;%d;%dm", r, g, b);
 }
 
 void reset_colors() {
