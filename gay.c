@@ -53,10 +53,11 @@ int main() {
 	struct color purple = { .ansi = 45, .xterm = 90, .r = 117, .g = 7, .b = 135 };
 
 	struct color colors[6] = { red, orange, yellow, green, blue, purple };
+	int colors_t = (int)(sizeof(colors)/sizeof(colors[0]));
 	
 	puts("");
-	for (int i = 0; i < (int)(sizeof(colors)/sizeof(colors[0])); i++) {
-		print_line(colors[i], (int)(sizeof(colors)/sizeof(colors[0]))*3-1, 1);
+	for (int i = 0; i < colors_t; i++) {
+		print_line(colors[i], colors_t*3-1, 1);
 	}
 	puts("");
 
