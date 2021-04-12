@@ -30,16 +30,18 @@ void reset_colors() {
 	printf("\033[0m");
 }
 
-void print_line(struct color c, int length) {
-	printf("  ");
-	set_ansi(c.ansi);
-	set_8bit(c.xterm);
-	set_24bit(c.r, c.g, c.b);
-	for (int i = 0; i < length; i++) {
-		printf(" ");
+void print_line(struct color c, int length, int scale) {
+	for (int s = 0; s < scale; s++) {
+		printf("  ");
+		set_ansi(c.ansi);
+		set_8bit(c.xterm);
+		set_24bit(c.r, c.g, c.b);
+		for (int i = 0; i < length*scale; i++) {
+			printf(" ");
+		}
+		reset_colors();
+		printf("\n");
 	}
-	reset_colors();
-	printf("\n");
 }
 
 int main() {
@@ -54,7 +56,7 @@ int main() {
 	
 	puts("");
 	for (int i = 0; i < (int)(sizeof(colors)/sizeof(colors[0])); i++) {
-		print_line(colors[i], (int)(sizeof(colors)/sizeof(colors[0]))*3-1);
+		print_line(colors[i], (int)(sizeof(colors)/sizeof(colors[0]))*3-1, 1);
 	}
 	puts("");
 
