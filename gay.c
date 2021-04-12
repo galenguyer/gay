@@ -53,8 +53,8 @@ int main() {
 	struct color colors[6] = { red, orange, yellow, green, blue, purple };
 	
 	puts("");
-	for (unsigned long int i = 0; i < sizeof(colors)/sizeof(colors[0]); i++) {
-		print_line(colors[i], 17);
+	for (int i = 0; i < (int)(sizeof(colors)/sizeof(colors[0])); i++) {
+		print_line(colors[i], (int)(sizeof(colors)/sizeof(colors[0]))*3-1);
 	}
 	puts("");
 
