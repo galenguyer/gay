@@ -29,7 +29,7 @@ int main() {
 	set_ansi(41);
 	set_8bit(160);
 	set_24bit(228, 3, 3);
-	printf("+++++++++++++++++");
+	printf("                 ");
 	reset_colors();
 	printf("\n");
 	// orange
@@ -37,7 +37,7 @@ int main() {
 	set_ansi(101);
 	set_8bit(208);
 	set_24bit(255, 140, 0);
-	printf("+++++++++++++++++");
+	printf("                 ");
 	reset_colors();
 	printf("\n");
 	// yellow
@@ -45,7 +45,7 @@ int main() {
 	set_ansi(103);
 	set_8bit(226);
 	set_24bit(255, 237, 0);
-	printf("+++++++++++++++++");
+	printf("                 ");
 	reset_colors();
 	printf("\n");
 	// green
@@ -53,7 +53,7 @@ int main() {
 	set_ansi(42);
 	set_8bit(28);
 	set_24bit(0, 128, 38);
-	printf("+++++++++++++++++");
+	printf("                 ");
 	reset_colors();
 	printf("\n");
 	// blue
@@ -61,7 +61,7 @@ int main() {
 	set_ansi(104);
 	set_8bit(27);
 	set_24bit(0, 77, 255);
-	printf("+++++++++++++++++");
+	printf("                 ");
 	reset_colors();
 	printf("\n");
 	// purple
@@ -69,7 +69,7 @@ int main() {
 	set_ansi(45);
 	set_8bit(90);
 	set_24bit(117, 7, 135);
-	printf("+++++++++++++++++");
+	printf("                 ");
 	reset_colors();
 	printf("\n");
 
