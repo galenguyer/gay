@@ -34,7 +34,7 @@ int main() {
 	puts("");
 
 	// red
-	struct color red = { .ansi = 41, .xterm = 160, .r = 288, .g = 3, .b = 3 };
+	struct color red = { .ansi = 41, .xterm = 160, .r = 228, .g = 3, .b = 3 };
 	printf("  ");
 	set_ansi(red.ansi);
 	set_8bit(red.xterm);
