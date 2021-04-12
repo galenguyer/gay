@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+struct color {
+	int ansi;
+	int xterm;
+	int r;
+	int g;
+	int b;
+};
+
 void set_ansi(int fg) {
 	printf("\033[%d;%dm", fg, fg - 10);
 }
@@ -25,10 +33,11 @@ void reset_colors() {
 int main() {
 	puts("");
 	// red
+	struct color red = { .ansi = 41, .xterm = 160, .r = 288, .g = 3, .b = 3 };
 	printf("  ");
-	set_ansi(41);
-	set_8bit(160);
-	set_24bit(228, 3, 3);
+	set_ansi(red.ansi);
+	set_8bit(red.xterm);
+	set_24bit(red.r, red.g, red.b);
 	printf("                 ");
 	reset_colors();
 	printf("\n");
