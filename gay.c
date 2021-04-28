@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
   int scale = 1;
   if (argc > 1) {
     for (int i = 1; i < argc; i++) {
-      if (strcmp(argv[i], "-h") == 0 || strcmp(argv[i], "--help")) {
+      if (strcmp(argv[i], "-h") == 0 || strcmp(argv[i], "--help") == 0) {
         puts("gay - v1.0");
         puts("by Galen Guyer");
         puts("");
