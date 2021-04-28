@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct color {
 	int ansi;
@@ -45,7 +46,14 @@ void print_line(struct color c, int length, int scale) {
 	}
 }
 
-int main() {
+int main(int argc, char** argv) {
+	int scale = 1;
+	if (argc > 1) {
+		if (atoi(argv[1]) > 0) {
+			scale = atoi(argv[1]);
+		}
+	}
+
 	struct color red = { .ansi = 41, .xterm = 160, .r = 228, .g = 3, .b = 3 };
 	struct color orange = { .ansi = 101, .xterm = 208, .r = 255, .g = 140, .b = 0 };
 	struct color yellow = { .ansi = 103, .xterm = 226, .r = 255, .g = 237, .b = 0 };
@@ -58,7 +66,7 @@ int main() {
 
 	puts("");
 	for (int i = 0; i < colors_t; i++) {
-		print_line(colors[i], colors_t*3-1, 1);
+		print_line(colors[i], colors_t*3-1, scale);
 	}
 	puts("");
 
